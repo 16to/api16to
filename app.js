@@ -18,7 +18,7 @@ const httpServer = http.createServer(app);
 
 // set index
 app.get('/*', (req, res) => {
-  res.sendFile(path.join(__dirname, './', 'index.html'));
+  res.sendFile(path.join(__dirname, './', 'err.html'));
 });
 
 // bind port
