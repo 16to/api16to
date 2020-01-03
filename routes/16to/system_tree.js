@@ -23,7 +23,7 @@ function systemTree() {
 
   // 构建生态
   const T21 =[];
-  T21[0]={'name': 'grunt/gulp/panto开发环境'};
+  T21[0]={'name': 'grunt/gulp开发环境'};
   T21[1]={'name': 'r.js/browserify/webpack打包工具'};
   T21[2]={'name': 'npm/jspm/bower包管理'};
   T21[3]={'name': 'fis3构建'};
