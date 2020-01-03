@@ -8,6 +8,10 @@ const connectdb = () => {
     password: 'zj6220257zj', // 密码
     database: '16to', // 库名称
   });
+  connection.connect((err) => {
+    if (err) return console.log('数据库连接失败', err.message);
+    console.log('数据库连接成功');
+  });
   return connection;
 };
 module.exports = connectdb;

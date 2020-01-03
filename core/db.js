@@ -36,6 +36,10 @@ const Select = (table, where, callback) => {
       con += ` ORDER BY ${where[j]} AND `;
     }
     // 增加limit功能，条件放在最后面
+    if (j === 'limit') {
+      con = con.slice(0, -5);
+      con += ` LIMIT ${where[j]} AND `;
+    }
   }
   con = con.slice(0, -5);
   const sql = `SELECT * FROM ${table} WHERE ${con}`;
