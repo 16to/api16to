@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
 function systemTree() {
   // 页面重构
   const T20 =[];
-  T20[0]={'name': '图片', 'value': 'https://www.baidu.com'};
+  T20[0]={'name': '图片'};
   T20[1]={'name': '图标'};
   T20[2]={'name': '字体'};
   T20[3]={'name': '视频'};
@@ -68,118 +68,118 @@ function systemTree() {
 
   // 组件模块库
   const T26 =[];
-  T26[1]={'name': 'jQuery'};
-  T26[2]={'name': 'Zepto'};
-  T26[3]={'name': 'Echarts'};
-  T26[4]={'name': 'commonJS/AMD/CMD'};
-  T26[5]={'name': 'ES6 Modules'};
-  T26[6]={'name': 'RequireJS'};
-  T26[7]={'name': 'seaJS'};
-  T26[8]={'name': 'extJS'};
+  T26[0]={'name': 'jQuery'};
+  T26[1]={'name': 'Zepto'};
+  T26[2]={'name': 'Echarts'};
+  T26[3]={'name': 'commonJS/AMD/CMD'};
+  T26[4]={'name': 'ES6 Modules'};
+  T26[5]={'name': 'RequireJS'};
+  T26[6]={'name': 'seaJS'};
+  T26[7]={'name': 'extJS'};
 
   // 工具和调试
   const T27 =[];
-  T27[1]={'name': 'fiddler+willow/wireshark'};
-  T27[2]={'name': 'Weinre/vorlon/chrome inspect'};
-  T27[3]={'name': 'mockjs/FMS'};
-  T27[4]={'name': 'supervior/inspector/nodemon'};
-  T27[5]={'name': 'sublime/VSCode/WebStorm'};
+  T27[0]={'name': 'fiddler+willow/wireshark'};
+  T27[1]={'name': 'Weinre/vorlon/chrome inspect'};
+  T27[2]={'name': 'mockjs/FMS'};
+  T27[3]={'name': 'supervior/inspector/nodemon'};
+  T27[4]={'name': 'sublime/VSCode/WebStorm'};
 
   // 分析和监控
   const T28 =[];
-  T28[1]={'name': 'pv/uv/vv/ip'};
-  T28[2]={'name': 'clickHeat/heatMap'};
-  T28[3]={'name': 'badjs'};
+  T28[0]={'name': 'pv/uv/vv/ip'};
+  T28[1]={'name': 'clickHeat/heatMap'};
+  T28[2]={'name': 'badjs'};
 
   // 前端测试
   const T29 =[];
-  T29[1]={'name': 'mocha'};
-  T29[2]={'name': 'Qunit'};
-  T29[3]={'name': 'phantomjs'};
-  T29[4]={'name': 'karma'};
-  T29[5]={'name': 'selenium'};
-  T29[6]={'name': 'Jasmine'};
+  T29[0]={'name': 'mocha'};
+  T29[1]={'name': 'Qunit'};
+  T29[2]={'name': 'phantomjs'};
+  T29[3]={'name': 'karma'};
+  T29[4]={'name': 'selenium'};
+  T29[4]={'name': 'Jasmine'};
 
   // 项目管理
   const T210 =[];
-  T210[1]={'name': '开发规范'};
-  T210[2]={'name': '开发方案'};
-  T210[3]={'name': '测试方案'};
-  T210[4]={'name': '项目部署'};
+  T210[0]={'name': '开发规范'};
+  T210[1]={'name': '开发方案'};
+  T210[2]={'name': '测试方案'};
+  T210[3]={'name': '项目部署'};
 
   // 技术趋势
   const T211 =[];
-  T211[1]={'name': 'PWA'};
-  T211[2]={'name': 'WebAssembly'};
-  T211[3]={'name': 'AMP'};
+  T211[0]={'name': 'PWA'};
+  T211[1]={'name': 'WebAssembly'};
+  T211[2]={'name': 'AMP'};
 
   // 相关网站
   const T212 =[];
-  T212[1]={'name': 'w3cschool.cn/runoob.com'};
-  T212[2]={'name': 'imooc.com/nowcoder.com'};
-  T212[3]={'name': '杭js/前端圈/前端之巅'};
-  T212[4]={'name': 'segmentfault/stackoverflow'};
+  T212[0]={'name': 'w3cschool.cn/runoob.com'};
+  T212[1]={'name': 'imooc.com/nowcoder.com'};
+  T212[2]={'name': '杭js/前端圈/前端之巅'};
+  T212[3]={'name': 'segmentfault/stackoverflow'};
 
   // 其他技能
   const T213 =[];
-  T213[1]={'name': 'axure'};
-  T213[2]={'name': 'xmind'};
-  T213[3]={'name': 'can i use'};
-  T213[4]={'name': 'github'};
-  T213[5]={'name': '团队管理'};
-  T213[6]={'name': '知识管理'};
-  T213[7]={'name': '编程思维'};
+  T213[0]={'name': 'axure'};
+  T213[1]={'name': 'xmind'};
+  T213[2]={'name': 'can i use'};
+  T213[3]={'name': 'github'};
+  T213[4]={'name': '团队管理'};
+  T213[5]={'name': '知识管理'};
+  T213[6]={'name': '编程思维'};
 
   // 前端优化
   const T214 =[];
-  T214[1]={'name': 'yslow/pagespeed'};
-  T214[2]={'name': 'SEO'};
-  T214[3]={'name': 'CDN'};
-  T214[4]={'name': '网络/资源/协议/存储'};
+  T214[0]={'name': 'yslow/pagespeed'};
+  T214[1]={'name': 'SEO'};
+  T214[2]={'name': 'CDN'};
+  T214[3]={'name': '网络/资源/协议/存储'};
 
   // 安全
   const T215 =[];
-  T215[1]={'name': 'Sandbox'};
-  T215[2]={'name': 'XSS'};
-  T215[3]={'name': 'CORS/CSRF'};
-  T215[4]={'name': 'sql注入'};
-  T215[5]={'name': 'https'};
+  T215[0]={'name': 'Sandbox'};
+  T215[1]={'name': 'XSS'};
+  T215[2]={'name': 'CORS/CSRF'};
+  T215[3]={'name': 'sql注入'};
+  T215[4]={'name': 'https'};
 
   // CSS预处理器
   const T216 =[];
-  T216[1]={'name': 'LESS'};
-  T216[2]={'name': 'Sass'};
-  T216[3]={'name': 'Stylus'};
+  T216[0]={'name': 'LESS'};
+  T216[1]={'name': 'Sass'};
+  T216[2]={'name': 'Stylus'};
 
   // 代码质量
   const T217 =[];
-  T217[1]={'name': 'JSLint/JSHint/ESLint'};
-  T217[2]={'name': 'jscs/Closure Linter'};
+  T217[0]={'name': 'JSLint/JSHint/ESLint'};
+  T217[1]={'name': 'jscs/Closure Linter'};
 
   // 浏览器和引擎
   const T218 =[];
-  T218[1]={'name': 'IE/Trident/JScript'};
-  T218[2]={'name': 'Chrome/Webkit/V8'};
-  T218[3]={'name': 'Firefox/Gecko/SpiderMonkey'};
-  T218[4]={'name': 'Safari/Webkit/Nitro'};
-  T218[5]={'name': 'Opera/Presto/V8'};
-  T218[6]={'name': 'Edge/EdgeHTML/Chakra'};
+  T218[0]={'name': 'IE/Trident/JScript'};
+  T218[1]={'name': 'Chrome/Webkit/V8'};
+  T218[2]={'name': 'Firefox/Gecko/SpiderMonkey'};
+  T218[3]={'name': 'Safari/Webkit/Nitro'};
+  T218[4]={'name': 'Opera/Presto/V8'};
+  T218[5]={'name': 'Edge/EdgeHTML/Chakra'};
 
   // HTTP协议
   const T219 =[];
-  T219[1]={'name': 'URI'};
-  T219[2]={'name': 'Session'};
-  T219[3]={'name': 'Authentication'};
-  T219[4]={'name': 'Request'};
-  T219[5]={'name': 'Response'};
-  T219[6]={'name': 'compression'};
-  T219[7]={'name': 'Server Push'};
-  T219[8]={'name': 'WebSocket'};
+  T219[0]={'name': 'URI'};
+  T219[1]={'name': 'Session'};
+  T219[2]={'name': 'Authentication'};
+  T219[3]={'name': 'Request'};
+  T219[4]={'name': 'Response'};
+  T219[5]={'name': 'compression'};
+  T219[6]={'name': 'Server Push'};
+  T219[7]={'name': 'WebSocket'};
 
   // W3C标准
   const T220 =[];
-  T220[1]={'name': 'HTML4.01/HTML5/XHTML1.0'};
-  T220[2]={'name': 'CSS2.0/CSS3.0'};
+  T220[0]={'name': 'HTML4.01/HTML5/XHTML1.0'};
+  T220[1]={'name': 'CSS2.0/CSS3.0'};
 
   // 前端模板
   const T221 =[];

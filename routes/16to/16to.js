@@ -32,6 +32,14 @@ router.get('/special_detail/:id', (req, res) => {
 router.get('/special_all', (req, res) => {
   const con = [];
   con['1']=1;
+  const s = req.query.s;
+  if (s==='type0') {
+    con['type']=0;
+  } else if (s==='type1') {
+    con['type']=1;
+  } else if (s==='type2') {
+    con['type']=2;
+  }
   con['orderBy']='sort desc,addtime desc';
   db.Select('xx_special', con, (err, response) => {
     res.send(response);
@@ -74,6 +82,15 @@ router.get('/skill_list10', (req, res) => {
 router.get('/skill_all', (req, res) => {
   const con = [];
   con['1']=1;
+  const s = req.query.s;
+  const i = req.query.i;
+  if (s==='type') {
+    con['type']=i;
+  } else if (s==='tag') {
+    con['tag']=i;
+  } else if (s==='type2') {
+    con['type']=2;
+  }
   con['orderBy']='sort desc,addtime desc';
   db.Select('xx_skill', con, (err, response) => {
     res.send(response);
@@ -108,7 +125,7 @@ router.get('/search', (req, res) => {
   con['1']=1;
   // eslint-disable-next-line max-len
   con['like'] = `title like '%${req.query.s}%' or content like '%${req.query.s}%'`;
-  db.Select('xx_works', con, (err, response) => {
+  db.Select('xx_skill', con, (err, response) => {
     res.send(response);
   });
 });

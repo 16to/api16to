@@ -1,12 +1,10 @@
 module.exports = {
   skillType: [
-    'WEB开发',
-    'WEB设计',
+    '前端开发',
+    '后端开发',
     '数据库',
     '服务器',
     '开发工具',
-    'SEO',
-    'C/C++',
   ],
   skillTag: [
     'PHP',
