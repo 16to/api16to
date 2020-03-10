@@ -35,6 +35,7 @@ module.exports = {
     'gulp',
     'Sublime',
     'Vue',
+    'Python',
   ],
   specialType: [
     '前端专题',

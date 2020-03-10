@@ -51,9 +51,19 @@ router.get('/skill_tag', (req, res) => {
   res.send(config.skillTag);
 });
 
-// 获取所有技术TAG
+// 获取所有技术Type
 router.get('/skill_type', (req, res) => {
   res.send(config.skillType);
+});
+
+// 获取所有专题Type
+router.get('/special_type', (req, res) => {
+  res.send(config.specialType);
+});
+
+// 获取所有作品Type
+router.get('/works_type', (req, res) => {
+  res.send(config.worksType);
 });
 
 // 获取所有技术总结前5个
