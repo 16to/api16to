@@ -132,10 +132,40 @@ router.get('/works_all', (req, res) => {
 // 获取所有搜索结果
 router.get('/search', (req, res) => {
   const con = [];
+  const con1 = [];
+  con['1']=1;
+  con1['1']=1;
+  // eslint-disable-next-line max-len
+  con['like'] = `title like '%${req.query.s}%' or content like '%${req.query.s}%'`;
+  db.Select('xx_skill', con, (err, response) => {
+    const skillSearch = response;
+    // eslint-disable-next-line max-len
+    con1['like']=`title like '%${req.query.s}%' or content like '%${req.query.s}%'`;
+    db.Select('xx_special', con1, (err1, response1) => {
+      const specialSearch = response1;
+      const allSearch=specialSearch.concat(skillSearch);
+      res.send(allSearch);
+    });
+  });
+});
+
+// 获取技术结果
+router.get('/search/skill', (req, res) => {
+  const con = [];
   con['1']=1;
   // eslint-disable-next-line max-len
   con['like'] = `title like '%${req.query.s}%' or content like '%${req.query.s}%'`;
   db.Select('xx_skill', con, (err, response) => {
+    res.send(response);
+  });
+});
+
+// 获取总结结果
+router.get('/search/special', (req, res) => {
+  const con = [];
+  // eslint-disable-next-line max-len
+  con['like'] = `title like '%${req.query.s}%' or content like '%${req.query.s}%'`;
+  db.Select('xx_special', con, (err, response) => {
     res.send(response);
   });
 });
