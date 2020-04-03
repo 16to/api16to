@@ -9,7 +9,7 @@ router.basePath='/16to';
 router.get('/special_list', (req, res) => {
   const con = [];
   con['1']=1;
-  con['orderBy']='click desc,sort desc';
+  con['orderBy']='sort desc,click desc';
   con['limit']='4';
   db.Select('xx_special', con, (err, response) => {
     res.send(response);
