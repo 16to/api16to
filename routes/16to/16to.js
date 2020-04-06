@@ -137,10 +137,12 @@ router.get('/search', (req, res) => {
   con1['1']=1;
   // eslint-disable-next-line max-len
   con['like'] = `title like '%${req.query.s}%' or content like '%${req.query.s}%'`;
+  con['orderBy']='addtime desc';
   db.Select('xx_skill', con, (err, response) => {
     const skillSearch = response;
     // eslint-disable-next-line max-len
     con1['like']=`title like '%${req.query.s}%' or content like '%${req.query.s}%'`;
+    con1['orderBy']='addtime desc';
     db.Select('xx_special', con1, (err1, response1) => {
       const specialSearch = response1;
       const allSearch=specialSearch.concat(skillSearch);
@@ -155,6 +157,7 @@ router.get('/search/skill', (req, res) => {
   con['1']=1;
   // eslint-disable-next-line max-len
   con['like'] = `title like '%${req.query.s}%' or content like '%${req.query.s}%'`;
+  con['orderBy']='addtime desc';
   db.Select('xx_skill', con, (err, response) => {
     res.send(response);
   });
@@ -165,6 +168,7 @@ router.get('/search/special', (req, res) => {
   const con = [];
   // eslint-disable-next-line max-len
   con['like'] = `title like '%${req.query.s}%' or content like '%${req.query.s}%'`;
+  con['orderBy']='addtime desc';
   db.Select('xx_special', con, (err, response) => {
     res.send(response);
   });
