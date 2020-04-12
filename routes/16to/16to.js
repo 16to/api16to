@@ -9,6 +9,7 @@ router.basePath='/16to';
 router.get('/special_list', (req, res) => {
   const con = [];
   con['1']=1;
+  con['state']=1;
   con['orderBy']='sort desc,click desc';
   con['limit']='4';
   db.Select('xx_special', con, (err, response) => {
@@ -32,6 +33,7 @@ router.get('/special_detail/:id', (req, res) => {
 router.get('/special_all', (req, res) => {
   const con = [];
   con['1']=1;
+  con['state']=1;
   const s = req.query.s;
   if (s==='type0') {
     con['type']=0;
@@ -135,6 +137,7 @@ router.get('/search', (req, res) => {
   const con1 = [];
   con['1']=1;
   con1['1']=1;
+  con1['state']=1;
   // eslint-disable-next-line max-len
   con['like'] = `title like '%${req.query.s}%' or content like '%${req.query.s}%'`;
   con['orderBy']='addtime desc';
@@ -166,6 +169,7 @@ router.get('/search/skill', (req, res) => {
 // 获取总结结果
 router.get('/search/special', (req, res) => {
   const con = [];
+  con['state']=1;
   // eslint-disable-next-line max-len
   con['like'] = `title like '%${req.query.s}%' or content like '%${req.query.s}%'`;
   con['orderBy']='addtime desc';
