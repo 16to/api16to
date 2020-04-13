@@ -28,7 +28,7 @@ const Select = (table, where, callback) => {
     }
     // 增加like的搜索功能
     if (j === 'like') {
-      con += `${where[j]} AND `;
+      con += `(${where[j]}) AND `;
     }
     // 增加orderBy排序功能，条件放在后面
     if (j === 'orderBy') {

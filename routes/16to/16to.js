@@ -169,6 +169,7 @@ router.get('/search/skill', (req, res) => {
 // 获取总结结果
 router.get('/search/special', (req, res) => {
   const con = [];
+  con['1']=1;
   con['state']=1;
   // eslint-disable-next-line max-len
   con['like'] = `title like '%${req.query.s}%' or content like '%${req.query.s}%'`;
