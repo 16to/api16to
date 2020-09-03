@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
 
 function T1() {
   // 一级目录
-  T1 = { 'name': 'React', 'children': T2() };
+  const T1 = { 'name': 'React', 'children': T2() };
   return T1;
 }
 
@@ -25,6 +25,7 @@ function T2() {
   T2.push({ 'name': 'Fiber', 'value': 'http://16to.com/' });
   T2.push({ 'name': 'Redux', 'value': 'http://16to.com/' });
   T2.push({ 'name': 'Refs', 'value': 'http://16to.com/' });
+  return T2;
 }
 
 module.exports = router;
