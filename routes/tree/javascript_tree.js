@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
 
 function T1() {
   // 一级目录
-  T1 = { 'name': '数据结构与算法', 'children': T2() };
+  const T1 = { 'name': '数据结构与算法', 'children': T2() };
   return T1;
 }
 
