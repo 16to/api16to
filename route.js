@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 // 动态路由
 const loadRoute = {
-  path: path.join(__dirname,'./','routes/'),
+  path: path.join(__dirname, './', 'routes/'),
   app: null,
   // 遍历目录
   listDir(dir) {
