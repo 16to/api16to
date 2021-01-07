@@ -76,7 +76,7 @@ router.get('/skill_list', (req, res) => {
   con['limit']='5';
   db.Select('xx_skill', con, (err, response) => {
     res.send(response);
-  });
+  }, 'left (content,1000) as content,id,title,addtime,type,click,tag');
 });
 
 // 获取所有技术总结前10个
@@ -106,7 +106,7 @@ router.get('/skill_all', (req, res) => {
   con['orderBy']='sort desc,addtime desc';
   db.Select('xx_skill', con, (err, response) => {
     res.send(response);
-  });
+  }, 'left (content,1080) as content,id,title,addtime,type,click,tag');
 });
 
 // 获取详细技术总结
