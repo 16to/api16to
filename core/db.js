@@ -13,7 +13,7 @@ const Query = (sql, callback) => {
 };
 
 // 查
-const Select = (table, where, callback) => {
+const Select = (table, where, callback, field='*') => {
   let con = '';
   // eslint-disable-next-line guard-for-in
   for (const j in where) {
@@ -42,7 +42,7 @@ const Select = (table, where, callback) => {
     }
   }
   con = con.slice(0, -5);
-  const sql = `SELECT * FROM ${table} WHERE ${con}`;
+  const sql = `SELECT ${field} FROM ${table} WHERE ${con}`;
   console.log(sql);
   connection.query(sql, callback);
 };

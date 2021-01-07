@@ -14,7 +14,7 @@ router.get('/special_list', (req, res) => {
   con['limit']='4';
   db.Select('xx_special', con, (err, response) => {
     res.send(response);
-  });
+  }, 'id,img,title,type,click,addtime');
 });
 
 // 获取详细专题
@@ -45,7 +45,7 @@ router.get('/special_all', (req, res) => {
   con['orderBy']='sort desc,addtime desc';
   db.Select('xx_special', con, (err, response) => {
     res.send(response);
-  });
+  }, 'id,img,title,type,click,addtime');
 });
 
 // 获取所有技术TAG
@@ -87,7 +87,7 @@ router.get('/skill_list10', (req, res) => {
   con['limit']='10';
   db.Select('xx_skill', con, (err, response) => {
     res.send(response);
-  });
+  }, 'id,title');
 });
 
 // 获取所有技术总结
